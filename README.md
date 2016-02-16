@@ -263,4 +263,4 @@ else
 
 # How does it work ?
 
-This script just send http request to a Faascape endpoint and build all headers value to be able to use all Faascape features releated to provider management.
+This script just send http requests to a Faascape endpoint and build all headers value to be able to use all Faascape features releated to provider management.
