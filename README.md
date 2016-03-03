@@ -1,6 +1,6 @@
 # What is it ?
 
-A simple bash script for linux system to upload, retrieve, delete and list files on several online storage providers using the Faascape platform (https://beta.faascape.com) as proxy.
+A simple bash script for linux system to upload, retrieve, delete and list files on several online storage providers using the Faascape platform (https://www.faascape.com) as proxy.
 
 You can use your own accounts for each provider or access everything with your Faascape account.
 
@@ -23,7 +23,7 @@ This is a very future proofed way to manage your storage. If you want to change 
 Two modes of operation may be used :
 
 - standard : you retrieve a token from the Faascape platform and use it to call faascape endpoints.
-- autonomous : you can provide your own credentials related to target provider when calling Faascape endpoint. Of course, it is not good security practice to handover your private id to a third party. This feature has been essentially provided to handle local Faascape proxy but you can use if needed on remote proxies.
+- autonomous : you can provide your own credentials related to target provider when calling Faascape endpoint. Of course, it is not good security practice to handover your private id to a third party. This feature has been essentially provided to handle local Faascape proxy but you can use if needed on remote proxies. We plan to build a docker image to distribute as a standard local proxy.
 
 # Prerequisite
 
@@ -263,4 +263,4 @@ else
 
 # How does it work ?
 
-This script just send http requests to a Faascape endpoint and build all headers value to be able to use all Faascape features releated to provider management.
+This script just send http requests to a Faascape endpoint and build all headers value to be able to use all Faascape features related to provider management.
