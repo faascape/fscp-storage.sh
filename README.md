@@ -264,3 +264,8 @@ else
 # How does it work ?
 
 This script just send http requests to a Faascape endpoint and build all headers value to be able to use all Faascape features related to provider management.
+
+
+# License
+
+Simplified BSD License
