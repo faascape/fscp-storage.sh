@@ -77,7 +77,7 @@ then
 else
 	FILESIZE=$(stat -c%s "$3")
     HEADERS=$HEADERS" -H \"Content-Length: $FILESIZE\""
-    eval curl -v -X POST --data-binary @$3 $HEADERS $FSCP_ENDPOINT/storage/lts/$2
+    eval curl -X POST --data-binary @$3 $HEADERS $FSCP_ENDPOINT/storage/lts/$2
 fi
 ;;
 
