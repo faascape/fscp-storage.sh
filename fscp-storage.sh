@@ -77,7 +77,7 @@ then
 else
 	FILESIZE=$(stat -c%s "$3")
     HEADERS=$HEADERS" -H \"Content-Length: $FILESIZE\""
-    eval curl -X POST --data-binary @$3 $HEADERS $FSCP_ENDPOINT/storage/lts/$2
+    eval curl -X POST --data-binary @$3 $HEADERS $FSCP_ENDPOINT/storage/$2
 fi
 ;;
 
@@ -86,7 +86,7 @@ if [ $# -ne 2 ]
 then
 	usage
 else
-	eval curl $HEADERS $FSCP_ENDPOINT/storage/lts/$2
+	eval curl $HEADERS $FSCP_ENDPOINT/storage/$2
 fi;;
 
 delete)
@@ -94,7 +94,7 @@ if [ $# -ne 2 ]
 then
 	usage
 else
-	eval curl -X DELETE $HEADERS $FSCP_ENDPOINT/storage/lts/$2
+	eval curl -X DELETE $HEADERS $FSCP_ENDPOINT/storage/$2
 fi
 ;;
 
