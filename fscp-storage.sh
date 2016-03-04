@@ -75,8 +75,10 @@ if [ $# -ne 3 ]
 then
 	usage
 else
-	FILESIZE=$(stat -c%s "$3")
+    FILESIZE=$(stat -c%s "$3")
+    MIMETYPE=$(file -b --mime-type "$3")
     HEADERS=$HEADERS" -H \"Content-Length: $FILESIZE\""
+    HEADERS=$HEADERS" -H \"Content-Type: $MIMETYPE\""
     eval curl -X POST --data-binary @$3 $HEADERS $FSCP_ENDPOINT/storage/$2
 fi
 ;;
